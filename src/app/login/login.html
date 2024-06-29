@@ -1,19 +1,38 @@
-<div>
-    <h2>Login</h2>
-    <form ng-submit="loginCtrl.login()">
-        <div>
-            <label>Email:</label>
-            <input type="text" ng-model="loginCtrl.email" required>
-        </div>
-        <div>
-            <label>Password:</label>
-            <input type="password" ng-model="loginCtrl.password" required>
-        </div>
-        <div>
-            <button type="submit">Login</button>
-        </div>
-        <div ng-if="loginCtrl.error">
-            <p style="color: red;">{{ loginCtrl.error }}</p>
-        </div>
-    </form>
-</div>
+<html lang="en">
+
+<body ng-app="twitterApp" ng-controller="LoginController as loginCtrl">
+
+    <div layout="column" layout-align="center center">
+        
+        <md-toolbar>
+            <div class="md-toolbar-tools" layout="row" layout-align="center center">
+                <h1>Welcome! Please login</h1>
+            </div>
+        </md-toolbar>
+        
+        <md-card>
+            <md-card-content>
+                <form ng-submit="loginCtrl.login()">
+                    <md-input-container class="md-block">
+                        <label>Email</label>
+                        <input ng-model="loginCtrl.email" type="email" required>
+                    </md-input-container>
+
+                    <md-input-container class="md-block">
+                        <label>Password</label>
+                        <input ng-model="loginCtrl.password" type="password" required>
+                    </md-input-container>
+
+                    <md-button class="md-raised md-primary" type="submit">Login</md-button>
+
+                    <div ng-if="loginCtrl.error" class="error-message">
+                        {{ loginCtrl.error }}
+                    </div>
+                </form>
+            </md-card-content>
+        </md-card>
+    </div>
+
+</body>
+
+</html>

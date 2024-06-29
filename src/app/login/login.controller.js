@@ -19,10 +19,12 @@
                 password: vm.password
             }, {
                 withCredentials: true
-            }).then(function(response) {
+            })
+            .then(function(response) {
                 // Handle successful login
                 $location.path('/home'); // Redirect to home or desired path
-            }).catch(function(error) {
+            })
+            .catch(function(error) {
                 // Handle login error
                 vm.error = 'Invalid email or password';
             });

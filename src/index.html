@@ -3,12 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Twitter API Frontend</title>
+    <!-- AngularJS library -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.min.js"></script>
+
+    <!-- Angular Animations library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-animate.min.js"></script>
+
+    <!-- Angular Aria library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-aria.min.js"></script>
+
+    <!-- Angular Material CSS and JS libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.22/angular-material.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.22/angular-material.min.js"></script>
+
+    <!-- Application scripts -->
     <script src="app/app.module.js"></script>
     <script src="app/app.config.js"></script>
     <script src="app/login/login.controller.js"></script>
     <script src="app/home/home.controller.js"></script>
+    <link rel="stylesheet" href="app/home/home.css">
 </head>
 <body>
     <div ng-view></div>

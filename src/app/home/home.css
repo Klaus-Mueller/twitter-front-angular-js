@@ -1,0 +1,18 @@
+    .home-card {
+        width: 80%;
+        margin: 20px;
+    }
+
+    .tweet-item {
+        border-bottom: 1px solid #ddd;
+        padding: 10px 0;
+    }
+
+    .tweet-user {
+        font-weight: bold;
+        margin-right: 10px;
+    }
+
+    .tweet-text {
+        margin: 0;
+    }

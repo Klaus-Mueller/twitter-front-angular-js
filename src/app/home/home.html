@@ -1,8 +1,18 @@
-<div>
-    <h2>Timeline</h2>
-    <div ng-repeat="tweet in homeCtrl.tweets">
-        <p>{{ tweet.text }}</p>
-        <small>{{ tweet.createdDate | date:'short' }}</small>
-        <hr>
-    </div>
+<div layout="column" layout-align="center center">
+    <md-toolbar>
+        <div class="md-toolbar-tools" layout="row" layout-align="center center">
+            <h1>Home</h1>
+        </div>
+    </md-toolbar>
+
+    <md-card class="home-card">
+        <md-card-content>
+            <md-list>
+                <md-list-item class="tweet-item" ng-repeat="tweet in homeCtrl.tweets">
+                    <p class="tweet-user">{{ tweet.userId }}:</p>
+                    <p class="tweet-text">{{ tweet.text }}</p>
+                </md-list-item>
+            </md-list>
+        </md-card-content>
+    </md-card>
 </div>

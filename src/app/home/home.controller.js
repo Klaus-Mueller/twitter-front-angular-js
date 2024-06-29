@@ -12,13 +12,15 @@
         vm.tweets = [];
 
         vm.getTimeline = function() {
-            $http.get('http://localhost:4567/timeline')
-                .then(function(response) {
-                    vm.tweets = response.data;
-                })
-                .catch(function(error) {
-                    console.error('Error occurred:', error);
-                });
+            $http.get('http://localhost:4567/timeline', {
+                withCredentials: true
+            })
+            .then(function(response) {
+                vm.tweets = response.data;
+            })
+            .catch(function(error) {
+                console.error('Error occurred:', error);
+            });
         };
 
         // Fetch timeline on controller initialization

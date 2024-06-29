@@ -10,6 +10,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@angular/animations": "^18.0.5",
+    "@angular/cdk": "^18.0.5",
+    "@angular/material": "^18.0.5",
     "angular": "^1.8.3"
   }
 }

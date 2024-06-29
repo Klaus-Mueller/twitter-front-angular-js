@@ -5,9 +5,9 @@
         .module('twitterApp')
         .config(config);
 
-    config.$inject = ['$routeProvider'];
+    config.$inject = ['$routeProvider', '$mdThemingProvider'];
 
-    function config($routeProvider) {
+    function config($routeProvider, $mdThemingProvider) {
         $routeProvider
             .when('/login', {
                 templateUrl: 'app/login/login.html',
@@ -22,5 +22,10 @@
             .otherwise({
                 redirectTo: '/login'
             });
+
+        // Configure Angular Material theme
+        $mdThemingProvider.theme('default')
+            .primaryPalette('blue')
+            .accentPalette('pink');
     }
 })();

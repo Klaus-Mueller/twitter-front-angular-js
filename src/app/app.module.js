@@ -2,5 +2,5 @@
     'use strict';
 
     angular
-        .module('twitterApp', ['ngRoute']);
+    .module('twitterApp', ['ngRoute', 'ngMaterial', 'ngAnimate', 'ngAria']);
 })();
